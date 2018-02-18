@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-echo hello $USER
+if [[ -n $USER ]]; then
+    echo hello $USER
+elif [[ -n $USERNAME ]]; then
+    echo hello $USERNAME
+else
+    echo hello Anonymous
+
+fi
